@@ -14,11 +14,11 @@
 
 <script>
 // @ is an alias to /src
-import TodoFilter from "../components/TodoFilter/index.vue";
-import TodoAdd from "../components/TodoAdd/index.vue";
-import TodoList from "../components/TodoList/index.vue";
-import useTodos from "../composables/useTodos.js";
-import useFilteredTodos from "../composables/useFilteredTodos.js";
+import TodoFilter from "@/components/TodoFilter/index.vue";
+import TodoAdd from "@/components/TodoAdd/index.vue";
+import TodoList from "@/components/TodoList/index.vue";
+import useTodos from "@/composables/useTodos.js";
+import useFilteredTodos from "@/composables/useFilteredTodos.js";
 
 export default {
   name: "Home",
@@ -29,13 +29,11 @@ export default {
   },
   setup() {
     const { todos, addTodo, deleteTodo } = useTodos();
-
     const { filter, filteredTodos } = useFilteredTodos(todos);
 
     return {
       todos,
       addTodo,
-
       filter,
       filteredTodos,
       deleteTodo,

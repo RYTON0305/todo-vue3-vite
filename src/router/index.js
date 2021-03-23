@@ -1,6 +1,5 @@
 // src/router/index.js
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
 
 // createRouter 创建路由实例
 const router = createRouter({
@@ -8,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: Home,
+      component: () => import("@/views/Home.vue"),
     },
   ],
 });

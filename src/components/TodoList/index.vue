@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TodoItem from "./components/TodoItem/index.vue";
+import TodoItem from "@/components/TodoList/components/TodoItem/index.vue";
 import { watch } from "vue";
 export default {
   name: "TodoList",
